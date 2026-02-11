@@ -121,6 +121,45 @@ export default function Downloads() {
           ))}
         </div>
 
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+          className="mt-8 rounded-box border border-base-300 bg-base-200 p-6"
+        >
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p className="font-semibold text-base-content/70 text-xs uppercase tracking-wider">
+                Arch Linux
+              </p>
+              <h3 className="mt-1 font-bold text-xl">Install from AUR</h3>
+            </div>
+            <a
+              href="https://aur.archlinux.org/packages/object0-bin"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline btn-sm"
+            >
+              <i className="fa-solid fa-arrow-up-right-from-square" />
+              object0-bin
+            </a>
+          </div>
+
+          <p className="mt-3 text-base-content/60 text-sm">
+            Use your preferred AUR helper:
+          </p>
+
+          <div className="mt-3 grid gap-2 md:grid-cols-2">
+            <div className="rounded-lg border border-base-300 bg-base-100 px-3 py-2 font-mono text-sm">
+              yay -S object0-bin
+            </div>
+            <div className="rounded-lg border border-base-300 bg-base-100 px-3 py-2 font-mono text-sm">
+              paru -S object0-bin
+            </div>
+          </div>
+        </motion.div>
+
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
